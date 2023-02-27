@@ -1,6 +1,6 @@
-<div style="text-align: center">
-  <h1>My App</h1>
-  <div>
-   <app-child></app-child>
-  </div>
+<div class="container">
+  <input type="text" #input>
+  <button (click)="OnSubmit(input)">Submit</button>
+  <app-demo [value]="inputText"></app-demo>
+  <app-demo [value]="inputText"></app-demo>
 </div>
