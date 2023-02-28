@@ -1,2 +1,61 @@
 <button mat-button>Hello world</button>
-<button mat-raised-button>Hello world</button>
+<button mat-raised-button>Raised Button</button>
+<button mat-flat-button>Flat Button</button>
+<button mat-stroked-button>Stroke Button</button>
+
+<div>
+    <button mat-icon-button>Icon</button>
+    <button mat-fab>Fab</button>
+    <button mat-mini-fab>Mini Fab</button>
+</div>
+
+<div>
+    <button color="primary" mat-button>Primary</button>
+    <button color="accent" mat-button>Accent</button>
+    <button color="warn" mat-button>Warn</button>
+</div>
+
+<div>
+    <!-- always floatLabel -->
+    <mat-form-field floatLabel="auto" appearance="outline" color="accent">
+        <mat-label>Name</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Min 5 characters</mat-hint>
+    </mat-form-field>
+<br>
+    <mat-form-field floatLabel="auto" appearance="fill" color="warn">
+        <mat-label>Address</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Min 5 characters</mat-hint>
+    </mat-form-field>
+
+    <br>
+    <mat-form-field>
+        <mat-label>Topic </mat-label>
+        <!-- multiple for select multiple -->
+        <mat-select [(value)]="selectedValue" multiple>
+            <mat-option>None</mat-option>
+            <mat-optgroup label="Web">
+                <mat-option value="angular">Angular</mat-option>
+                <mat-option value="react">React</mat-option>
+                <mat-option value="vue">Vue</mat-option>
+            </mat-optgroup>
+            <mat-optgroup label="Mobile">
+                <mat-option value="ionic">Ionic</mat-option>
+                <mat-option value="reactnative">React Native</mat-option>
+            </mat-optgroup>
+        </mat-select>
+    </mat-form-field>
+    <hr>
+    <form action="">
+        <mat-form-field>
+            <input type="text" matInput [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let option of objectOptions" [value]="option">
+                    {{option.name}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
+    {{selectedValue}}
+</div>
