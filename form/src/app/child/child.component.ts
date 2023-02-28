@@ -16,7 +16,6 @@ export class ChildComponent{
     {name:'React'},
     {name:'Vue'}
   ];
-  myControl=new FormControl();
   displayFn(subject:any){
     return subject? subject.name:undefined
   }
