@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+    margin: 20px 40px;
+  }
+.select{
+    margin: 30px;
+    margin-left: 40px;
+}
+.nodata{
+    text-align: center;
+    color:#ec0909;
+}
+.input{
+    margin: 20px 0px 0px 50px;
+}
