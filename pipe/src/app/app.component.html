@@ -1,0 +1,35 @@
+<h1>{{title}}</h1>
+<h1>{{title | uppercase}}</h1>
+<h1>{{title | lowercase}}</h1>
+<h1>{{title | titlecase}}</h1>
+<hr>
+<h2>Date</h2>
+<h2>Date: {{today | date}}</h2>
+<h2>fullDate: {{today | date:'fullDate'}}</h2>
+<h3>shortTime: {{today | date:'shortTime'}}</h3>
+<h3>Medium: {{today | date:'medium'}}</h3>
+<h3>MM:SS: {{today | date:'mm:ss'}}</h3>
+<hr>
+<h2>Advanced pipes</h2>
+<h3>Slice: {{title | slice:3:8 }}</h3>
+<h3>{{user | json | uppercase}}</h3>
+ <!-- 1 mean integer remove 00 , .2 means takes two values after . -->
+<h3>{{ 004.3200 | number:'1.2'}}</h3>
+<h3>{{100 | currency:'USD'}}</h3>
+<h3>{{100 | currency:'GBP'}}</h3>
+<h3>{{100 | currency:'INR'}}</h3>
+<hr>
+<h2>Custom pipes</h2>
+
+<!-- use command -> ng g c p(ng generate component pipe Folder/name) -->
+<h3>Usd to Mmk</h3>
+<h3>{{ (30 | usdMmk).value }} USD = {{ (30 | usdMmk).mmk }} MMK</h3>
+<h3>{{ (50 | usdMmk).value }} USD = {{ (50 | usdMmk).mmk }} MMK</h3>
+
+<h3>Circle Area</h3>
+<h3>{{(5 | circleArea).r}} (radius) = {{(5 | circleArea).calc}} (Area)</h3>
+
+<h3>Custom directive</h3>
+<h2>run -> ng g directive Name(eg.redEl)</h2>
+
+<h3 appRedEl>{{title}}</h3>
