@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<input type="text" placeholder="Enter new task" #task>
+<br><br>
+<button (click)="addTask(task.value)">Add New Task</button>
+<br><br>
+<ul *ngFor="let task of tasks">
+  <li>{{task.name}} <button (click)="removeTask(task.id)">Remove Task</button></li>
+</ul>
+<hr>
+
+<ul *ngFor="let user of users">
+  <app-child [pToc]="parent" [user]="user"></app-child>
+</ul>
