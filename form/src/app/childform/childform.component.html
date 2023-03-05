@@ -12,7 +12,7 @@
             <label for="lastname">LastName</label><br>
             <!-- ngModel add validation tags like untouched valid ->check console -->
             <input type="text" required minlength="2" #lastname="ngModel" name="lastname" class="form-control" ngModel>
-            <div *ngIf="lastname.touched &&lastname.invalid"  class="alert alert-danger">INVALID!!!</div>
+            <div *ngIf="lastname.touched && lastname.invalid"  class="alert alert-danger">INVALID!!!</div>
         </div>
         <pre></pre>
         <div class="form-group">

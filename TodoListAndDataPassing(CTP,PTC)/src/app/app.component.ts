@@ -27,4 +27,7 @@ export class AppComponent {
     console.log(item);
     this.data=item;
   }
+
+  // two way binding
+  twoData:any;
 }
