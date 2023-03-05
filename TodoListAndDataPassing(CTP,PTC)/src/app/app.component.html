@@ -11,3 +11,8 @@
 <ul *ngFor="let user of users">
   <app-child [pToc]="parent" [user]="user"></app-child>
 </ul>
+<hr>
+
+<app-child-pass (updateDataEvent)="updateData($event)"></app-child-pass>
+<h2>{{data}}</h2>
+

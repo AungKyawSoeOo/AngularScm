@@ -19,5 +19,12 @@ export class AppComponent {
   };
   removeTask(id:number){
     this.tasks=this.tasks.filter(task=>task.id!==id);
+  };
+  
+  // to pass child to parent
+  data='x';
+  updateData(item:string){
+    console.log(item);
+    this.data=item;
   }
 }
